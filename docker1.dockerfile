@@ -1,5 +1,5 @@
 FROM alpine
 ENV Hoy = Viernes
 RUN echo "Comando de imagen"
-CMD echo "Comando de inicialización $Hoy"
+CMD python docker1.python
 ###END DOCKERFILE###
