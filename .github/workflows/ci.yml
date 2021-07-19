@@ -87,7 +87,7 @@ jobs:
          heroku_email: eduardorecioperez0507@hotmail.com
          # Want to just login
          
-         heroku_app_name: shielded-depths-33234
+         heroku_app_name: apidevops07
          # Heroku api key
 
 
