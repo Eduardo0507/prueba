@@ -1,5 +1,14 @@
-FROM alpine
-ENV Hoy = Viernes
-RUN echo "Comando de imagen"
-CMD echo "Comando de Incializacion $HOY"
-###END DOCKERFILE###
+
+FROM python:3.9
+
+ENV PORT=8000
+
+WORKDIR /app
+
+COPY requirements.txt requirements.txt
+
+RUN pip install -r requirements.txt
+
+COPY . .
+
+CMD uvicorn --host 0.0.0.0 --port $PORT api:app
