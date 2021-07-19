@@ -31,8 +31,5 @@ jobs:
 
       - name: Setup Python
         uses: actions/setup-python@v2.2.2
-         with:
-        # Version range or exact version of a Python version to use, using SemVer's version range syntax.
-        python-version: 3.9
-        architecture: x64
+
       - run: python my-unittest.py
