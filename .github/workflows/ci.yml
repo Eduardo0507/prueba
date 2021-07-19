@@ -81,11 +81,11 @@ jobs:
         uses: lucassarcanjo/heroku-deploy@v2.2.2
         with:
           # Email Linked to your Heroku Account
-          email: ${{secrets.EMAIL}}
+          email: eduardorecioperez0507@hotmail.com
           # Your Heroku API Key
-          api_key: ${{secrets.HEROKU_API_TOKEN}}
+          api_key: 4bcc46cf-c022-4bdc-9c99-8e697984e122
           # Your Heroku App Name
-          app_name: ${{secrets.APP_NAME}}
+          app_name: mysterious-mountain-49435
 
     
 
