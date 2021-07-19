@@ -77,16 +77,16 @@ jobs:
       - uses: actions/checkout@v2
       - name: Heroku Deploy
         # You may pin to the exact commit or the version.
-        # uses: tiltshift/heroku-promote-app@342a661f8c6451e34e9eca0b435d3f2953aa33bc
-        uses: tiltshift/heroku-promote-app@v1
+        # uses: lucassarcanjo/heroku-deploy@1db4c62f6032efe526c12734f18d36669218e5af
+        uses: mtsmachado8/heroku-deploy@v2.0.3
         with:
         # Heroku app name
-
-         heroku_api_key: 4bcc46cf-c022-4bdc-9c99-8e697984e122
-         # Heroku email address
          heroku_email: eduardorecioperez0507@hotmail.com
          # Want to just login
          
+         heroku_api_key: 4bcc46cf-c022-4bdc-9c99-8e697984e122
+         # Heroku email address
+
          heroku_app_name: apidevops07
          # Heroku api key
 
