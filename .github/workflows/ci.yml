@@ -27,17 +27,25 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
-      - name: Run a one-line script
-        run: echo Hello, world!
-        
-      - name: Set up Python 
+      - name: Install dependencies
         uses: actions/setup-python@v2.2.2
         with:
           # Version range or exact version of a Python version to use, using SemVer's version range syntax.
-          python-version: 3.8.5
+          python-version: 3.8
+          # The target architecture (x86, x64) of the Python interpreter.
           architecture: x64
-
-      - name: Unit tests
+          
+      - run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          
+      - name: Unit Tests
+        uses: actions/setup-python@v2.2.2
+        with:
+          # Version range or exact version of a Python version to use, using SemVer's version range syntax.
+          python-version: 3.8
+          # The target architecture (x86, x64) of the Python interpreter.
+          architecture: x64
  
       - run: python my-unittest.py
       - run: coverage run my-unittest.py
@@ -47,6 +55,15 @@ jobs:
       - run: coverage run my-unittest3.py
       - run: python my-unittest4.py
       - run: coverage run my-unittest4.py
+      - run: behave tests/Integracion
+      
+      - name: Integration tests
+        uses: actions/setup-python@v2.2.2
+        with:
+          # Version range or exact version of a Python version to use, using SemVer's version range syntax.
+          python-version: 3.8
+          # The target architecture (x86, x64) of the Python interpreter.
+          architecture: x64
       - run: behave tests/Integracion
               
 
