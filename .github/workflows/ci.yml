@@ -76,17 +76,19 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Heroku Deploy
-      # You may pin to the exact commit or the version.
-      # uses: nyakaz73/heroku-django-deploy@f0e67aecb5fe9315a722637d4af3312f388ea8ef
-        uses: nyakaz73/heroku-django-deploy@v0.53
+        # You may pin to the exact commit or the version.
+        # uses: tiltshift/heroku-promote-app@342a661f8c6451e34e9eca0b435d3f2953aa33bc
+        uses: tiltshift/heroku-promote-app@v1
         with:
         # Heroku app name
-         heroku_app_name: mysterious-mountain-49435
-         # Heroku api key
+
          heroku_api_key: 4bcc46cf-c022-4bdc-9c99-8e697984e122
          # Heroku email address
-         heroku_email_address: eduardorecioperez0507@hotmail.com
+         heroku_email: eduardorecioperez0507@hotmail.com
          # Want to just login
+         
+         heroku_app_name: mysterious-mountain-49435
+         # Heroku api key
 
 
             
