@@ -5,7 +5,10 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master,feature/* ]
+    branches:  
+    - master
+    - feature/*
+    
   pull_request:
     branches: [ master ]
 
@@ -35,17 +38,16 @@ jobs:
           architecture: x64
 
       - name: Unit tests
-
-      - run: | 
-             python my-unittest.py
-             coverage run my-unittest.py
-             python my-unittest2.py
-             coverage run my-unittest2.py
-             python my-unittest3.py
-             coverage run my-unittest3.py
-             python my-unittest4.py
-             coverage run my-unittest4.py
-             behave tests/Integracion
+ 
+      - run: python my-unittest.py
+      - run: coverage run my-unittest.py
+      - run: python my-unittest2.py
+      - run: coverage run my-unittest2.py
+      - run: python my-unittest3.py
+      - run: coverage run my-unittest3.py
+      - run: python my-unittest4.py
+      - run: coverage run my-unittest4.py
+      - run: behave tests/Integracion
               
 
       
