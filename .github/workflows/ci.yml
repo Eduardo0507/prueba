@@ -77,15 +77,19 @@ jobs:
       - uses: actions/checkout@v2
       - name: Heroku Deploy
         # You may pin to the exact commit or the version.
-        # uses: mikeesto/heroku-awake@d2824b2ae10b431342802b35964d861c4e69f7e0  
-        uses: mikeesto/heroku-awake@1.0.0
+        # uses: onekiloparsec/heroku-node-deploy-subfolder@85d5701f800be8126e12b7f6f47e965c71f67b56
+        uses: onekiloparsec/heroku-node-deploy-subfolder@v1.1.0
         with:
           # Email Linked to your Heroku Account
           email: eduardorecioperez0507@hotmail.com
           # Your Heroku API Key
           api_key: 4bcc46cf-c022-4bdc-9c99-8e697984e122
+          
+          heroku_branch: Eduardo0507-patch-1
           # Your Heroku App Name
           app_name: mysterious-mountain-49435
+          
+          subfolder: dist
 
     
 
