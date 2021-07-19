@@ -4,6 +4,10 @@ from calc import Calc
 app = FastAPI()
 calc = Calc()
 
+@app.get("/")
+def read_root():
+    return {"Nombre": "Luis Eduardo Recio Pérez", "Matrícula": "1092091"}
+
 @app.get("/sumar")
 def read_sumar(num1: int = 0, num2: int = 0):
     return {calc.sumar(num1,num2)
