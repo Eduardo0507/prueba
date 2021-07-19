@@ -78,7 +78,7 @@ jobs:
       - name: Heroku Deploy
         # You may pin to the exact commit or the version.
         # uses: lucassarcanjo/heroku-deploy@1db4c62f6032efe526c12734f18d36669218e5af
-        uses: mtsmachado8/heroku-deploy@v2.0.3
+        uses: apidevops07/heroku-deploy@v2.0.3
         with:
           # Email Linked to your Heroku Account
           email: ${{secrets.EMAIL}}
