@@ -3,7 +3,7 @@
 name: CI
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
+  # Triggers the workflow on push or pull request events but only for the master branch.
   push:
     branches:  
     - master
@@ -31,7 +31,7 @@ jobs:
         uses: actions/setup-python@v2.2.2
         with:
           # Version range or exact version of a Python version to use, using SemVer's version range syntax.
-          python-version: 3.8
+          python-version: 3
           # The target architecture (x86, x64) of the Python interpreter.
           architecture: x64
           
@@ -43,30 +43,12 @@ jobs:
         uses: actions/setup-python@v2.2.2
         with:
           # Version range or exact version of a Python version to use, using SemVer's version range syntax.
-          python-version: 3.8
+          python-version: 3
           # The target architecture (x86, x64) of the Python interpreter.
           architecture: x64
  
       - run: python my-unittest.py
       - run: coverage run my-unittest.py
-      - run: python my-unittest2.py
-      - run: coverage run my-unittest2.py
-      - run: python my-unittest3.py
-      - run: coverage run my-unittest3.py
-      - run: python my-unittest4.py
-      - run: coverage run my-unittest4.py
-      - run: behave tests/Integracion
-      
-      - name: Integration tests
-        uses: actions/setup-python@v2.2.2
-        with:
-          # Version range or exact version of a Python version to use, using SemVer's version range syntax.
-          python-version: 3.8
-          # The target architecture (x86, x64) of the Python interpreter.
-          architecture: x64
-      - run: behave tests/Integracion
-              
-
       
   deploy:
     runs-on: ubuntu-latest
@@ -76,17 +58,19 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Heroku Deploy
-      # You may pin to the exact commit or the version.
-      # uses: nyakaz73/heroku-django-deploy@f0e67aecb5fe9315a722637d4af3312f388ea8ef
-        uses: nyakaz73/heroku-django-deploy@v0.53
+        # You may pin to the exact commit or the version.
+        # uses: mtsmachado8/heroku-deploy@5bf18e5f6160beaccc01c678d0aaa81963434e74
+        uses: mtsmachado8/heroku-deploy@v2.0.3
         with:
         # Heroku app name
-         heroku_app_name: mysterious-mountain-49435
-         # Heroku api key
-         heroku_api_key: 4bcc46cf-c022-4bdc-9c99-8e697984e122
-         # Heroku email address
-         heroku_email_address: eduardorecioperez0507@hotmail.com
+         email: eduardorecioperez0507@hotmail.com
          # Want to just login
+         
+         api_key: 4bcc46cf-c022-4bdc-9c99-8e697984e122
+         # Heroku email address
+
+         app_name: powerful-fortress-22783
+         # Heroku api key
 
 
             
