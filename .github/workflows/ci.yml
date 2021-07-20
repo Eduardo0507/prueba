@@ -87,7 +87,7 @@ jobs:
          heroku_api_key: 4bcc46cf-c022-4bdc-9c99-8e697984e122
          # Heroku email address
 
-         heroku_app_name: apidevops07
+         heroku_app_name: powerful-fortress-22783
          # Heroku api key
 
 
