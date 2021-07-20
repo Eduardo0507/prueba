@@ -50,17 +50,6 @@ jobs:
       - run: python my-unittest.py
       - run: coverage run my-unittest.py
       
-      - name: Integration tests
-        uses: actions/setup-python@v2.2.2
-        with:
-          # Version range or exact version of a Python version to use, using SemVer's version range syntax.
-          python-version: 3
-          # The target architecture (x86, x64) of the Python interpreter.
-          architecture: x64
-      - run: behave tests/Integracion
-              
-
-      
   deploy:
     runs-on: ubuntu-latest
     
