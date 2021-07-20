@@ -60,7 +60,7 @@ jobs:
       - name: Heroku Deploy
         # You may pin to the exact commit or the version.
         # uses: mtsmachado8/heroku-deploy@5bf18e5f6160beaccc01c678d0aaa81963434e74
-        uses: mikeesto/heroku-awake@1.0.0
+        uses: mtsmachado8/heroku-deploy@v2.0.3
         with:
         # Heroku app name
          email: eduardorecioperez0507@hotmail.com
