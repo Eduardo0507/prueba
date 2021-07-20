@@ -49,13 +49,6 @@ jobs:
  
       - run: python my-unittest.py
       - run: coverage run my-unittest.py
-      - run: python my-unittest2.py
-      - run: coverage run my-unittest2.py
-      - run: python my-unittest3.py
-      - run: coverage run my-unittest3.py
-      - run: python my-unittest4.py
-      - run: coverage run my-unittest4.py
-      - run: behave tests/Integracion
       
       - name: Integration tests
         uses: actions/setup-python@v2.2.2
